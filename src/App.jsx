@@ -1,12 +1,28 @@
 /* eslint-disable react/prop-types */
+import Actor from "./Actor";
 import "./App.css";
+import Singer from "./Singer";
 import Todo from "./Todo";
 
 function App() {
+  const actors = ["Sakib", "Rajjak", "Jasim", "Manna"];
+  const singers = [
+    { id: 1, name: "Dr. Mahfuzur Rahman", age: 53 },
+    { id: 2, name: "Eva Rahman", age: 33 },
+    { id: 3, name: "Eva Brown", age: 93 },
+    { id: 4, name: "Balam", age: 43 },
+  ];
   return (
     <>
       <h1>Vite + React</h1>
-      <Todo task={"Learn React"} isDone={false} />
+      <Actor name={"Bapparaj"} />
+      {singers.map((singer) => (
+        <Singer singer={singer} key={singer.id} />
+      ))}
+      {actors.map((actor) => (
+        <Actor name={actor} key={actor} />
+      ))}
+      {/* <Todo task={"Learn React"} isDone={false} /> */}
       {/* <Person />
       <Student />
       <Developer />
