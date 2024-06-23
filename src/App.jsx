@@ -1,15 +1,17 @@
 /* eslint-disable react/prop-types */
 import "./App.css";
+import Todo from "./Todo";
 
 function App() {
   return (
     <>
       <h1>Vite + React</h1>
-      <Person />
+      <Todo task={"Learn React"} isDone={false} />
+      {/* <Person />
       <Student />
       <Developer />
       <Device name="Laptop" price="69000" />
-      <Device name="Watch" price="1200" />
+      <Device name="Watch" price="1200" /> */}
     </>
   );
 }
